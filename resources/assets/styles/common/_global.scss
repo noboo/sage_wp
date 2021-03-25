@@ -1,0 +1,243 @@
+/* navbar */
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(65,105,225,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.calcs {
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* navbar */
+
+.navbar-collapse li + li {
+  border-left: 1px solid #cccccc;
+}
+/* loding */
+
+.loader-bg {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  img {
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 200000;
+  }
+}
+/* woo */
+
+.add_to_cart_button {
+  visibility: hidden;
+}
+
+.price {
+  visibility: hidden;
+}
+/* youtube */
+
+.youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+/* page-top */
+
+.page-top {
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+}
+/* pager */
+
+.pager {
+  text-align: center;
+}
+
+a.page-numbers {
+  background: rgba(0, 0, 0, 0.02);
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 5px 8px;
+  margin: 0 2px;
+}
+
+.pager .current {
+  background: rgba(0, 0, 0, 0.02);
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 5px 8px;
+  margin: 0 2px;
+  background-color: rgba(100, 100, 100, 1);
+  color: rgba(255, 255, 255, 1);
+}
+/* back to top */
+
+#page-top {
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  font-size: 16px;
+}
+/* infinite-scroll */
+
+#infinite-handle span {
+  background: $blue;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 6px 24px;
+  border-radius: 5px;
+}
+/* slick */
+
+.slider-container {
+  position: relative;
+}
+
+.slider {
+  display: none;
+  margin: 0;
+  overflow: visible;
+  &.slick-initialized {
+    display: block;
+  }
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  height: 36px;
+  margin-top: -18px;
+  color: $blue;
+  line-height: 36px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-prev {
+  left: 20px;
+}
+
+.slider-next {
+  right: 20px;
+}
+
+.slick-slide {
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1em;
+  outline: 0;
+  background-color: #fff;
+} //アドセンス検索
+.gsc-input {
+  margin: 0;
+}
+
+.woocommerce-additional-fields .woocommerce-input-wrapper {
+  width: 100%;
+} // Block Reveal Effects
+.breffects {
+  opacity: 0;
+}
+
+.blockn {
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  .reveal {
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 0.6s 0.6s;
+    animation-fill-mode: backwards;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $blue;
+    transform: translateX(-100%);
+    animation: secondaryImageOverlayIn 0.6s 0s,
+      secondaryImageOverlayOut 0.6s 0.6s;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes secondaryImageOverlayIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes secondaryImageOverlayOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .img-slider {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+}

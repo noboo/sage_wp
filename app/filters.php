@@ -26,6 +26,20 @@ add_filter('body_class', function (array $classes) {
     return array_filter($classes);
 });
 
+//Displaying the sidebar
+add_filter('sage/display_sidebar', function ($display) {
+    static $display;
+
+    isset($display) || $display = in_array(true, [
+      // The sidebar will be displayed if any of the following return true
+      is_page_template('views/single-custom.blade.php'),
+      //is_page_template('views/single-jetpack.blade.php'),
+      is_page_template('views/template-custom.blade.php')
+    ]);
+
+    return $display;
+});
+
 /**
  * Add "… Continued" to the excerpt
  */

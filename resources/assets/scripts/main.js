@@ -1,6 +1,6 @@
 // import external dependencies
 import 'jquery';
-
+import 'popper.js/dist/popper';
 // Import everything from autoload
 import './autoload/**/*'
 
